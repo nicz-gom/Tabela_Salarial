@@ -10,20 +10,25 @@
 <body>
     <section>
         <div class="titulo">
-        <header><h1>Sua Tabela Salarial</h1></header>
-
-        <form>
-            <hr><br>
-            <strong>Dados do funcionário:</strong><br>
-            <label for="nome">Nome do funcionário: </label>
-            <input type="text" id="nome" required name="nome"><br>
-            <label for="departamento">Departamento:</label>
-            <input type="number" id="departamento" name="departamento" required><br>
-            <label for="Horas">Horas de Trabalho:</label>
-            <input type="datetime" name="Horas" id="horas" required><br>
-            <button id="calcular">Calcular</button>
-        </form>
-
+            <header><h1>Sua Tabela Salarial</h1></header>
+        </div>
+        <divi id="formulario">
+            <form onsubmit="event.preventDefault();">
+                <br>
+                <strong>Dados do funcionário:</strong><br>
+                <label for="Input_nome">Nome do funcionário: </label>
+                <input type="text" id="Input_nome" name="name_f" required><br>
+                <label for="departameto">Departamento:</label>
+                <input type="number" id="departamento" name="departameto_f" required><br>
+                <label for="Input_horas">Horas de Trabalho:</label>
+                <input type="number" name="Horas_f" id="Input_horas" required><br>
+                <div id="botoes">
+                    <button id="calcular">Calcular</button>
+                    <button id="adicionar">Adicionar</button>
+                    <button id="sair">logout</button>
+                </div>
+            </form>
+        </div>
     </section>
     <script src="script.js"></script>
 </body>

@@ -10,16 +10,21 @@ body{
     width: 100%;
 
     /*Variaveis de cor*/
+    --body: rgb(248, 245, 237);
     --fundo:rgb(226, 225, 225);
     --borda: rgb(216, 215, 215);
+    --borda2: rgb(180, 180, 180);
     --botoes: rgb(58, 226, 184);
     --botoesHover: rgb(88, 235, 196);
+    --botaoTamanho: 23px;
+    --fonteInput: 'Courier New', Courier, monospace;
     --transicao: 1s;
+
+    background-color: var(--body);
 }
 
 h1{
     margin: 10px 4px;
-    
 }
 
 section{
@@ -27,4 +32,67 @@ section{
     flex-direction: column;
     height: 100vh;
     width: 100vw;
+}
+
+
+.titulo{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+    border-bottom: 1px solid var(--borda2);
+}
+
+#formulario{
+    flex: 8;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: var(--fundo);
+    height: 50%;
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    border: 2px solid var(--borda);
+    padding: 10px;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    height: var(--botaoTamanho);
+    padding: 5px;
+    background-color: var(--botoes);
+    transition: var(--transicao);
+}
+
+button:hover{
+    scale: 1.05;
+    background-color: var(--botoesHover);
+}
+
+input{  
+    width: 90%;
+    max-width: 90%;
+    border: none;
+    height: 23px;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: var(--fonteInput);
+}
+
+label{
+    font-family: var(--fonteInput);
 }
